@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>guess game</title>
+  </head>
+  <body>
+    <!-- . You're going to make a game just like the one in the video. Essentially, the app randomly picks a letter, and the user has to guess which letter the app chose. Put the following text on your page:
+
+    3. Guess what letter I'm thinking of
+    
+    4. Wins: (# of times the user has guessed the letter correctly)
+    
+    5. Losses: (# of times the user has failed to guess the letter correctly after exhausting all guesses)
+    
+    6. Guesses Left: (# of guesses left. This will update)
+    
+    7. Your Guesses So Far: (the specific letters that the user typed. Display these until the user either wins or loses.)
+    
+    8. When the player wins, increase the Wins counter and start the game over again (without refreshing the page).
+    
+    9. When the player loses, increase the Losses counter and restart the game without a page refresh (just like when the user wins).
+     -->
+     <div class="container">
+<h1 id="gameHeading">Welcome to Psychic Game, guess what letter I`m thinking of:</h1>
+<br>
+<p id="userGuess"> Your choice: </p>
+<p id="wins"> Wins: </p>
+<p id="looses"> Losses: </p>
+<p id="guessesLeft">Guesses left: </p>
+<p id="currentGuess">Your Guesses So Far: </p>
+
+
+<!--
+ 1. user press letter on keyboard.
+    -add to userGuess
+ 2. computer generates random letter.
+ 3. compare letters:
+    -if letter match 
+        add to Wins.
+        add to curennt guesses so far
+        
+    -if letter dont match
+        -add letter to "currentGuess"
+            -count down guesses left
+                -if none of guesses left
+                    -add 1 to losses;
+
+
+           -->
+
+
+
+
+</div>
+    <!-- Optional JavaScript -->
+    <script src="assets/javascript/game.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
