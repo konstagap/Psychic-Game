@@ -1,21 +1,27 @@
 
 // computer choises of letter
-// var computerChoices = ["q", "w", "e","r","t","y","u","i","o","p","a","s",
-// "d","f","g","h","j","k","l","z","x","c","v","b","n","m"];
-var computerChoices = ["a","b" ];
+var computerChoices = ["q", "w", "e","r","t","y","u","i","o","p","a","s",
+"d","f","g","h","j","k","l","z","x","c","v","b","n","m"];
+// var computerChoices = ["a","b" ];
 //variables for storing results
 var win =0;
-var loose =0;
+var losses = 0;
 var tries=9;
 var current=[];
+// restart function;
+var restart = function() {
+	tries= 9;
+    current= [];
+}
 // function called upon event key up,
 // random loop for computer guess.
 
 
     document.onkeyup = function(event) {
-
     var userGuess = event.key;
+ 
     var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+    
     if (userGuess == computerGuess) {
        win++;
        current.push(userGuess);
@@ -23,31 +29,44 @@ var current=[];
     } else {
         tries--;
         current.push(userGuess);
-
     }
+    if (tries == 0) {
+		losses++;
+		restart();
+	}
 
-    
-    // changing elements in html
+ // changing elements in html
+    document.getElementById('losses').innerHTML="Losses: "+ losses;
     document.getElementById('guessesLeft').innerHTML="Guesses left: "+ tries;
     document.getElementById('currentGuess').innerHTML="Your guesses so far: " + current;
     document.getElementById('wins').innerHTML="Wins: " + win;
     document.getElementById('userGuess').innerHTML="Your choice: " + userGuess;
-}
+    }
 
-// <!--
+    // if (tries == 0) {
+    //     losses++;
+    // document.getElementById('looses').innerHTML="Losses: "+loose;
+    // };
+// // <<!-- 
+// You have 9 tries
 // 1. user press letter on keyboard.
-//    -add to userGuess
+//     -add to userGuess
 // 2. computer generates random letter.
 // 3. compare letters:
-//    -if letter match 
-//        add to Wins.
-       
-//    -if letter dont match
-//        -add letter to "currentGuess"
-//            -count down guesses left
-//                -if none of guesses left
-//                    -add 1 to losses;
+//     -if letter match 
+//         add to Wins.
+//         add to curennt guesses so far
+        
+//     -if letter dont match
+//         -add letter to "currentGuess"
+//             -count down guesses left
+
+// If none of guesses left
+// reset results to start;        
+// -add 1 to losses;
+        
 
 
-//           -->
+// -->
+// -->
 
