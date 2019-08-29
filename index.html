@@ -1,73 +1,81 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>guess game</title>
-  </head>
-  <body>
-    <!-- . You're going to make a game just like the one in the video. Essentially, the app randomly picks a letter, and the user has to guess which letter the app chose. Put the following text on your page:
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    3. Guess what letter I'm thinking of
-    
-    4. Wins: (# of times the user has guessed the letter correctly)
-    
-    5. Losses: (# of times the user has failed to guess the letter correctly after exhausting all guesses)
-    
-    6. Guesses Left: (# of guesses left. This will update)
-    
-    7. Your Guesses So Far: (the specific letters that the user typed. Display these until the user either wins or loses.)
-    
-    8. When the player wins, increase the Wins counter and start the game over again (without refreshing the page).
-    
-    9. When the player loses, increase the Losses counter and restart the game without a page refresh (just like when the user wins).
-     -->
-     <div class="container">
-<h1 id="gameHeading">Welcome to Psychic Game, guess what letter I`m thinking of:</h1>
+  <title>guess game</title>
+</head>
+
+<body>
 <br>
-<p id="userGuess"> Your choice: </p>
-<p id="wins"> Wins: </p>
-<p id="losses"> Losses: </p>
-<p id="guessesLeft">Guesses left: </p>
-<p id="currentGuess">Your Guesses So Far: </p>
+  <div id="loser" class="container ">
+    <div class="row">
+      <div class="p-3 m-auto col-md-12 bg-info text-white rounded-pill">
+          <h1 id="gameHeading">Welcome to Psychic Game, guess what letter I`m thinking of:</h1>
+      </div>
+    </div>
+    
+<br>
+    <div class="row mb-3">
+      <div class="col-md-6 m-auto text-center ">
+          <h4 id="userGuess" class="p-2 text-white bg-dark text-center text-capitalize rounded-pill" > Your choice: </h4>
+      </div>
+    </div>
+   
+    <div class="row">
+      <div class="col-md-6 text-center bg-success p-2 rounded-left  ">
+          <h2 id="wins" class=" text-center font-weight-bolder text-white p-2 m-0"> Wins: </h2>
+      </div>
+      <div class="col-md-6 text-center bg-warning  p-2 rounded-right">
+          <h2 id="losses" class="text-center font-weight-bolder text-white p-2 m-0"> Losses: </h2>
+      </div>
+    </div>
+    <div class="col-md-12 mt-3 ">
+        <h4 id="currentGuess" class="p-3 text-white bg-danger text-center text-capitalize rounded-pill" > Your Guesses So Far:  </h4>
+    </div>
+  </div>
+    <div class="row mt-3">
+      <div class="col-md-5 p-4 m-auto text-white rounded-pill text-center bg-info">
+          <h3 id="guessesLeft">Guesses left: </h3>
+      </div>
+    </div>
+
+    <div class="row mt-3 ">
+      <div class="col-md-4 m-auto">
+         <p>Ok, I know this is not the best style, Just wanted keep it simple, like Google &copy; <br> </p>
+          <h1>THE RULES:</h1>
+          <ul>
+            <li>think of letter and press it on the keyboard</li>
+            <li>if you guess you win</li>
+            <li>you have 9 tries</li>
+            <li>if you use them all you loose and game starts again</li>
+          </ul>
+      </div>
+    </div>
+    
+    
+  </div>
 
 
-<!-- 
-    You have 9 tries
-            1. user press letter on keyboard.
-                -add to userGuess
-            2. computer generates random letter.
-            3. compare letters:
-                -if letter match 
-                    add to Wins.
-                    add to curennt guesses so far
-                    
-                -if letter dont match
-                    -add letter to "currentGuess"
-                        -count down guesses left
+  <!-- Optional JavaScript -->
+  <script src="assets/javascript/game.js"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
 
-     If none of guesses left
-            reset results to start;        
-            -add 1 to losses;
-                    
-
-
-           -->
- -->
-
-
-
-</div>
-    <!-- Optional JavaScript -->
-    <script src="assets/javascript/game.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
 </html>
